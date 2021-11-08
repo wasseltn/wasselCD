@@ -10,13 +10,6 @@ pipeline {
                 }
             }
         }
-        stage('Install') {
-             steps{
-                script{
-                    sh "npm install -g npm@latest"
-                }
-            }
-        }
         stage('Build') {
              steps{
                 script{
