@@ -13,7 +13,7 @@ pipeline {
         stage('Install') {
              steps{
                 script{
-                    sh "npm install"
+                    sh "npm install -g npm@latest"
                 }
             }
         }
