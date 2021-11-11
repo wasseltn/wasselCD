@@ -1,2 +1,13 @@
 ---
 # tasks file for docker-registry
+- name: Log into DockerHub
+  docker_login:
+    username: wasseldocker
+    password: 9e14ef56-b6e8-4e82-9e56-05e4be39a112
+
+- name: Tag and push to docker hub
+  docker_image:
+    name: pipe:latest
+    repository: wasseldocker/cd_project
+    tag: end
+    push: yes
